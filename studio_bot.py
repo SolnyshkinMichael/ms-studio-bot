@@ -9,7 +9,7 @@ import csv
 import io
 
 # Токен бота
-TOKEN = "7913022194:AAFVtWazg7HDzCn_ACFFxgRb1KYx7tDORDM"
+TOKEN = os.environ.get('BOT_TOKEN')
 
 # Состояния для бронирования
 SELECT_BOOKING_TYPE, SELECT_DAY, SELECT_TIME, SELECT_DURATION = range(4)
@@ -3901,4 +3901,5 @@ def main():
     application.run_polling()
 
 if __name__ == '__main__':
+
     main()
